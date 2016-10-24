@@ -1,0 +1,1139 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: "微软雅黑","arial";
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+}
+img{
+	width: 100%;
+	height: auto;
+}
+ul li{
+	list-style: none;
+}
+/*清除浮动*/
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	zoom: 1
+}
+/*header*/
+.header-box{
+    height: 60px;
+    border-bottom: 1px solid #ececec;
+    background: #fff;
+}
+.header{
+	width: 1000px;
+	margin:0 auto; 
+}
+/*logo*/
+.header .logo{
+	width: 109px;
+    margin-right: 60px;
+    padding-top: 10px;
+    height: 50px;
+    float: left;
+}
+/*nav*/
+.nav{
+	float: left;
+}
+.nav .nav_ul{
+	line-height: 60px;
+}
+.nav .nav_ul li{
+	position: relative;
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 50px;
+    float: left;
+}
+.nav .nav_ul li a{
+	color: #333;
+	text-decoration: none;
+}
+.nav .nav_ul li:first-child a{
+	color: #35b558;
+}
+.nav .nav_ul li a:hover{
+	color: #35b558;
+}
+.nav_ul li span{
+    position: absolute;
+    top: 45%;
+    right: -25%;
+    width: 8px;
+    height: 8px;
+    border-left: 1px solid #c1c1c1;
+    border-top: 1px solid #c1c1c1;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    transform-origin: 4px 4px;
+    -webkit-transform-origin: 4px 4px;
+    -o-transform-origin: 4px 4px;
+    -ms-transform-origin: 4px 4px;
+    -moz-transform-origin: 4px 4px;
+}
+.nav_ul li:hover span{
+    margin-bottom: -2px;
+    border-top: 1px solid #35b558;
+    border-left: 1px solid #35b558;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    animation: rotate 1s ease normal;
+    -moz-animation: rotate 1s ease normal;
+    -webkit-animation: rotate 1s ease normal;
+}
+@keyframes rotate{
+    0% { margin-bottom: 2px;transform: rotate(-135deg); }
+    10%{margin-bottom: -2px;}
+    100%{transform: rotate(45deg);}
+}
+@-webkit-keyframes rotate{
+    0% {margin-bottom: 2px;-webkit-transform: rotate(-135deg); }
+    10%{margin-bottom: -2px;}
+    100%{-webkit-transform: rotate(45deg);}
+}
+@-o-keyframes rotate{
+    0% {margin-bottom: 2px;-o-transform: rotate(-135deg); }
+    10%{margin-bottom: -2px;}
+    100%{-o-transform: rotate(45deg);}
+}
+@-moz-keyframes rotate{
+    0% {margin-bottom: 2px;-moz-transform: rotate(-135deg); }
+    10%{margin-bottom: -2px;}
+    100%{-moz-transform: rotate(45deg);}
+}
+.nav_ul li:hover .school{
+    display: block;
+}
+/*导航下拉列表*/
+/*职业学院*/
+.school{ 
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    top: 60px;
+    left: 0;
+    background: #fff;
+    font-size: 12px;
+    color: #666;
+    width: 280px;
+}
+.school h4{
+    margin: 10px 0;
+    padding: 0 15px;
+    background: #fafafa;
+    height: 28px;
+    line-height: 28px;
+    font-weight: 300;
+}
+.college-list a{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    position: relative;
+}
+.school s,.mmber-course s{
+    background: url(../img/allicon.png) 0 0 no-repeat;
+    background-position: 0 0;
+    background-size: 64px 64px;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 10px!important;
+    position: absolute;
+    margin-right: 5px;
+}
+.school .college-web{
+    background-position: -15px -27px;
+    top: 34%;
+    left: 4%;
+}
+.college-pyt{
+    background-position: -2px -2px;
+    top: 30%;
+    left: 4%;
+}
+.school .collegeWeb{
+    background: url(../img/allicon3.png) 0 0 no-repeat;
+    background-position: 0 0;
+    background-size: 16px 148px;
+}
+.school .college-go{
+    background-position: -2px -38px;
+    top: 30%;
+    left: 4%;
+}
+.school .college-ios{
+    background-position: -2px -82px;
+    top: 27.5%;
+    left: 4%;
+}
+/*会员课程*/
+.mmber-course b{
+    color: #bbb;
+    float: right;
+    font-weight: normal;
+}
+.mmber-course{
+    padding: 10px 0;
+}
+.mmber-course a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+    padding:0 15px; 
+    position: relative;
+}
+.mmber-course s{
+    top: 37%;
+    left: 4%;
+}
+.mmber-course .course_library{
+    background-position: 0 -13px;
+}
+.mmber-course .career_path{
+    background-position: -45px 0;    
+}
+.mmber-course .knowledge_system{
+    background-position: -30px -12px;
+}
+.mmber-course .series_courses{
+    background: url(../img/xlkc2.png) 0 0 no-repeat;
+    background-position: 0 0;
+    background-size: 12px 12px;
+}
+.mmber-course  .course_label{
+    background-position: -15px -13px;
+}
+.mmber-course  .vip-shop{
+    background-position: -16px -0px;
+}
+.mmber-course a:hover {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    background: #fafafa;
+    color: #35b558;
+}
+
+/*login*/
+.login-box{
+    text-align: right;
+    width: 200px;
+    height: 60px;
+    float: right;
+}
+.login-box ul{
+	width: 100%;
+}
+.login-box li{
+	float: left;
+	height: 60px;
+    width: 17px;
+    margin-left: 45px;
+    cursor: pointer;
+    position: relative;
+}
+/*下载APP*/
+.dowlond-app{
+    width: 120px;
+    display: none;
+    position: absolute;
+    top: 102%;
+    left: -50px;
+    background: #fff;
+    z-index: 33;
+}
+.dowlond-app img{
+	width: 100%;
+}
+.dowlond-app b{
+	position: absolute;
+    top: -8px;
+    right: 53px;
+    display: inline-block;
+}
+.icon-triangle{
+    position: absolute;
+    top: 87%;
+    right: 8px;
+    display: none;
+}
+.dowlond-app b,.icon-triangle{
+	transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    width: 15px;
+    height: 15px;
+    border-top: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+    background: #fff;
+}
+/*seach*/
+.login-box .seach-icon{
+	background: url(../img/search-icon.png) center no-repeat;
+    background-size: 17px 17px;
+}
+.login-box .seach-icon:hover{
+	background: url(../img/search-icon2.png) center no-repeat;
+    background-size: 17px 17px;
+}
+/*phone*/
+.login-box  .phone-icon{
+	background: url(../img/app-icon.png) center no-repeat;
+    background-size: 17px 17px;
+}
+.login-box .phone-icon:hover{
+	background: url(../img/app-icon2.png) center no-repeat;
+    background-size: 17px 17px;
+}
+.login-box .phone-icon:hover .dowlond-app{
+	display: block;
+}
+/*login*/
+.login-icon{
+	background: url(../img/login-icon.png) center no-repeat;
+    background-size: 17px 17px;
+}
+.login-icon:hover .login-main,.login-icon:hover .icon-triangle{
+	display: block;
+}
+/*login-下拉框*/
+.login-icon .login-main{
+    width: 130px;
+    background: #fff;
+    position: absolute;
+    top: 61px;
+    right: -48%;
+    display: none;
+    z-index: 2222;
+}
+.login-box .login-icon ul li{
+    width: 100%;
+    text-align: center;
+    height: 35px;
+    font-size: 12px;
+    line-height: 35px;
+    margin: 0px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    background: #fff;
+    vertical-align: middle;
+}
+.login-icon .login-main li:hover{
+    background: #fafafa;
+}
+.login-box .login-icon ul li a{
+    color: #333;
+    text-decoration: none;
+    line-height: 35px;
+}
+.login-icon ul li a:hover{
+ 	color: #35b558;
+}
+.login-icon ul b{
+    background: #fff url(../img/allicon2.png) 0 0 no-repeat;
+    background-size: 64px 64px;
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+    display: inline-block;
+}
+.login-icon .learning_Center{
+    background-position: -16px -15px;
+}
+.login-icon .Per_homepage{
+	background-position: -45px -1px;
+}
+.login-icon .message{
+	background-position: -16px -13px;
+}
+.login-icon .account_Settings{
+	background-position: -30px -1px;
+}
+/*主体部分*/
+.banner{
+	position: relative;
+	height: 525px
+}
+/*video_art*/
+.video_art{
+    width: 100%;
+    height: 525px;
+    background: url(../img/sp_56c863c.jpg) 0 0 no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+}
+.video_art video{
+    position: relative;
+    left: 50%;
+    margin-left: -960px;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+/*banner_main*/
+.banner_main{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 525px;
+    text-align: center;
+}
+.banner_main h1{
+    font-size: 35px;
+    color: #fff;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    height: 45px;
+}
+.banner_main p{
+	font-size: 13px;
+    color: #fafafa;
+    line-height: 21px;
+    height: 21px;
+}
+.dowlond_app{
+	height: 44px;
+    margin-top: 48px;
+}
+.dowlond_app a{
+	display: inline-block;
+    height: 44px;
+    width: 141px;
+}
+/*dowlond*/
+.dowlond_android,.dowlond_ios{
+     transition: background .1s;
+    -moz-transition: background .1s;
+    -webkit-transition: background .1s;
+    -o-transition: background .1s;
+}
+.dowlond_android{
+	background: url(../img/anddown_92313c1.png) top left no-repeat;
+	background-size: 100%;
+	margin-right: 25px;
+}
+.dowlond_android:hover{
+	background: url(../img/anddownhover_6bed6d5.png) no-repeat center / 141px 44px;
+}
+.dowlond_ios{
+	background: url(../img/iosdown_0813309.png) top left no-repeat;
+	background-size: 100%;
+}
+.dowlond_ios:hover{
+	background: url(../img/iosdownhover_43e4f99.png) no-repeat center / 141px 44px;
+}
+.banner_main .a_member{
+    margin-top: 45px;
+    font-size: 12px;
+    color: #fafafa;
+    display: block;
+    height: 18px;
+}
+/*用QQ。微信。微博登录*/
+.share{
+    width: 230px;
+    margin: auto;
+    margin-top: 15px;
+}
+.share ul li{
+	width: 38px;
+    height: 38px;
+    float: left;
+    margin-right: 25px;
+    transition: background .5s;
+    -moz-transition: background .5s;
+    -webkit-transition: background .5s;
+    -o-transition: background .5s;
+}
+.share ul li:last-child{
+	margin-right: 0px
+}
+.share .weixin-share{
+	background: url(../img/weixinlogin_204d5be.png) top left no-repeat;
+	background-size: 100%;
+}
+.weixin-share:hover{
+	background: url(../img/weixinloginhover_acca8e3.png) top left no-repeat;
+	background-size: 100%;
+}
+.qq-share{
+	background: url(../img/qqlogin_43fbf38.png) top left no-repeat;
+	background-size: 100%;
+}
+.qq-share:hover{
+	background: url(../img/qqloginhover_fd0f74b.png) top left no-repeat;
+	background-size: 100%;
+}
+.share ul li:nth-child(3){
+	background: url(../img/weibologin_7cb8c71.png) top left no-repeat;
+	background-size: 100%;
+}
+.share ul li:nth-child(3):hover{
+	background: url(../img/weibologinhover_0c48361.png) top left no-repeat;
+	background-size: 100%;
+}
+.share ul li:last-child{
+	background: url(../img/phonelogin_39c73f9.png) top left no-repeat;
+	background-size: 100%;
+}
+.share ul li:last-child:hover{
+	background: url(../img/phoneloginhover_d5ddac1.png) top left no-repeat;
+	background-size: 100%;
+}
+/*College*/
+.college_box{
+	width: 1000px;
+	margin:auto;
+	position: relative;
+	top: 36px; 
+}
+.college_box>div{
+	width: 320px;
+	margin-right: 20px;
+	background: #fff;
+	float: left;
+}
+.college_box>div:last-child{
+	margin-right: 0px
+}
+/*various_colleges*/
+.ollege .various_colleges{
+    width: 96%;
+    margin: auto;
+ 	padding: 17px 10px;
+    height: 110px;
+}
+.college .various_colleges li{
+    float: left;
+    width: 25%;
+}
+.various_colleges li b{
+	display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    transition: border .5s;
+    -moz-transition: border .5s;
+    -webkit-transition: border .5s;
+}
+.various_colleges li img{
+	width: 100%
+}
+.various_colleges li span{
+    color: #666;
+    font-size: 12px;
+    display:inline-block;
+    margin-top: 7px;
+    transition: color .5s;
+    -moz-transition: color .5s;
+    -webkit-transition: color .5s;
+    -o-transition: color .5s;
+}
+/*职业学院hover*/
+.various_colleges .the_front b{
+    background: url(../img/cardhtml5_c4de6b8.jpg) no-repeat center / 26px 35px;
+}
+.the_front:hover b{
+	border: 1px solid #dc4d10;
+}
+.the_front:hover span,.Python_coll:hover span,.go_coll:hover span,.ios_call:hover span{
+	color:#35b558;
+}
+.various_colleges  .Python_coll b{
+	background: url(../img/cardpython_46dafa5.png) no-repeat center / 35px 35px;
+}
+.Python_coll:hover b{
+	border:1px solid #f9d423; 
+}
+.various_colleges .go_coll b{
+	background: url(../img/cardgo_f7d5603.png) no-repeat center / 25px 35px;
+}
+.various_colleges .ios_call b{
+	background: url(../img/cardios_1b210b7.jpg) no-repeat center / 30px 35px;
+}
+.go_coll:hover b{
+	border:1px solid #6ad7e5; 
+}
+.ios_call:hover b{
+	border:1px solid #666666;
+}
+/*各个学院标题*/
+.college>span,.special-course>span,.jk-Community>span{
+	font-size: 18px;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    color: #333;
+    background: #f9f9f9;
+}
+.college>p,.special-course>p,.jk-Community>p{
+    border-top: 1px solid #eee;
+    height: 60px;
+    padding: 10px 17px;
+    text-align: left;
+    font-size: 13px;
+    color: #444;
+    line-height: 21px;
+    overflow: hidden;
+    background: #f9f9f9;
+}
+ul.clearfix.various_colleges,.special,.jk-Teacher {
+    padding: 17px 10px;
+}
+/*专项课程*/
+.special{
+	width: 90%;
+	margin: auto;
+}
+.special li{
+	float: left;
+	width: 50%;
+	margin: auto;
+}
+.jk-Teacher li{
+	float: left;
+	width: 33.3%;
+	margin: auto;
+}
+.special b,.jk-Teacher b{
+    display: inline-block;
+    width: 100%;
+    height: 21px;
+ 	font-size: 13px;
+    color: #444;
+    padding-top: 35px;
+    font-weight: normal;
+}
+.special span{
+    display: block;
+    color: #666;
+    margin-top: 4%;
+    font-size: 12px;
+}
+.special .special-icon{
+	background: url(../img/cardvideo_744765b.jpg) no-repeat top center / 30px 30px;
+}
+.special li:hover .special-icon,.special li:hover .wiki{
+	color: #35b558;
+    transition: background .1s;
+    -moz-transition: background .1s;
+    -webkit-transition: background .1s;
+}
+/*专项课程*/
+.special li:hover .special-icon{
+	background: url(../img/cardvideohover_a616ae2.png) no-repeat top center / 30px 30px;
+}
+.special .wiki{
+	background: url(../img/cardwiki_5eaea4b.jpg) no-repeat top center / 25px 26px;
+}
+.special li:hover .wiki{
+	background: url(../img/cardwikihover_6974141.png) no-repeat top center / 25px 26px;
+}
+/*极客社区*/
+.student{
+ background: url(../img/cardxue_99b0a45.jpg) no-repeat top center / 33px 28px;
+ }
+ .coach{
+  background: url(../img/cardjiao_d70bff6.jpg) no-repeat top center / 36px 27px;
+ }
+ .chief_evangelist{
+ 	background: url(../img/cardbu_1d16287.jpg) no-repeat top center / 22px 30px;
+ }
+ /*主体部分*/
+ .container{
+ 	background: #f9f9f9;
+    width: 100%;
+    min-width: 1000px;
+ }
+ /*就业学习*/
+.container .study-top{
+  	margin-top: 150px;
+ }
+ .employment_study{
+    width: 1000px;
+    margin: auto;
+    margin-top: 30px;
+ }
+
+  /*study_l*/
+.study_l{
+    padding-top: 10px;
+    width: 230px;
+    background: #fff;
+    float: left;
+    margin-right: 14px;
+    padding-bottom: 16px;
+ }
+.study-h2{
+ 	border-left: 2px solid #35b558;
+}
+.study-h2,.jc-study-h2,.special-study-h2,.js-study-h2{
+ 	font-size: 19px;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 15px; 
+    font-weight: normal;
+}
+.jc-study-h2{
+	border-left: 2px solid #2d85ca;
+}
+.special-study-h2{
+	border-left: 2px solid #ff5c00;
+}
+.js-study-h2{
+	border-left: 2px solid #ad3a37;
+}
+.study_text{
+	font-size: 14px;
+    color: #333;
+    padding-left: 17px;
+    margin-top: 5px;
+    height: 20px;
+    line-height: 20px;
+}
+.study_img,.tech-savvy{
+	display: inline-block;
+	text-align: center;
+    height: 155px;
+}
+.study_img img{
+	margin-top: 38px;
+    width: 52%;
+    height: 88px;
+}
+.tech-savvy img{
+    width: 52%;
+    height: 88px;
+}
+.tech-savvy{
+	height: 88px;
+}
+.apply_to{
+    margin-left: 17px;
+    margin-bottom: 5px;
+    display: block;
+    width: 62px;
+    height: 16px;
+    font-size: 12px;
+    border: 1px solid #eee;
+    line-height: 16px;
+    border-radius: 2px;
+    color: gray;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.apply_to b{
+    width: 16px;
+    height: 16px;
+    background: #35b558 url(../img/h2icon_a96e146.png) top left no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    float: left;
+}
+#apply b{
+	background: #2d85ca url(../img/h2icon_a96e146.png) top left no-repeat;
+	background-size: 100%;
+}
+#special b{
+	background: #ff5c00 url(../img/h2icon_a96e146.png) top left no-repeat;
+	background-size: 100%;
+}
+.study_l .describe{
+	font-size: 12px;
+    color: #666;
+    line-height: 22px;
+    padding-left: 17px;
+}
+/*study_r*/
+.study_r{
+	width: 756px;
+    float: left;
+}
+/*就业学习*/
+.study_r .study_r_ul li{
+	float: left;
+    margin-right: 13.5px;
+    background: #fff;
+}
+.study_r .study_r_ul li:nth-child(1),.study_r .study_r_ul li:nth-child(2){
+	width: 370px;
+    height: 180px;
+    margin-bottom: 14px;
+}
+.study_r .study_r_ul li:nth-child(2),.study_r .study_r_ul li:last-child{
+   margin-right:0px;
+}
+.study_r .study_r_ul li:nth-child(3),.study_r .study_r_ul li:nth-child(4),.study_r .study_r_ul li:nth-child(5){
+    width: 243px;
+    height: 135px;
+    overflow: hidden;
+}
+/*基础学习*/
+.study_Basics li{
+    float: left;
+    margin-right: 13.5px;
+    background: #fff;
+    width: 243px;
+    height: 158px;
+}
+.study_Basics li:nth-child(3),.study_Basics li:last-child{
+	margin-right:0px;
+}
+.study_Basics li:nth-child(1),.study_Basics li:nth-child(2),.study_Basics li:nth-child(3){
+	margin-bottom:14px;
+}
+
+/*专项提高*/
+.special_increase li,.special_in li{
+	width: 371px;
+    height: 158px;
+    float: left;
+}
+.special_increase li:nth-child(1),.special_increase li:nth-child(2){
+    margin-bottom: 14px;
+}
+.special_increase li:nth-child(odd),.special_in li:nth-child(odd){
+	margin-right: 14px;
+}
+/*我是技术大咖*/
+.special_in a{
+	display: block;
+	height: 158px;
+}
+.special_in li{
+	margin-bottom: 0px;
+}
+.study_text_js{
+ 	font-size: 14px;
+    color: #333;
+    padding-left: 17px;
+    margin-top: 2px;
+    height: 20px;
+    line-height: 20px;
+}
+/*我是小白*/
+.white li{
+	float: left;
+    margin-right: 13.5px;
+    background: #fff;
+    width: 243px;
+    height: 158px;
+    text-align: center;
+}
+.white li a{
+	display: block;
+	text-decoration: none;
+}
+.white li:last-child{
+	margin-right: 0px;
+}
+.white .gide{
+    display: inline-block;
+    margin-top: 30px;
+    height: 55px;
+}
+.white h4{
+	display: block;
+    font-size: 18px;
+    color: #333;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 10px;
+    font-weight: normal;
+}
+.beginners img{
+	width: 41px;
+    height: 55px;
+}
+.white>li p{
+	font-size: 12px;
+    color: #666;
+    height: 16px;
+    line-height: 16px;
+    margin-top: 5px;
+}
+.white .consultation img{
+	width: 55px;
+    height: 48px;
+}
+.white .free-phone img{
+    width: 55px;
+    height: 55px;
+}
+.white li:hover,.student_list li:hover{
+	box-shadow: 0 0 2px 3px #eee; 
+    transition: box-shadow .5s;
+    -moz-transition: box-shadow .5s;
+    -webkit-transition: box-shadow .5s;
+    -o-transition: box-shadow .5s;
+}
+/*和他们的故事-*/
+.corporate-name{
+	margin-left: 17px;
+    padding-bottom: 10px;
+}
+.corporate-name li{
+    float: left;
+    width: 56px;
+    height: 56px;
+    background: #ccc;
+    margin: 14px 14px 0 0;
+}
+.student_list li{
+    float: left;
+    margin-right: 13.5px;
+    background: #fff;
+    width: 243px;
+    height: 243px;
+    text-align: center;
+}
+.student_list li:nth-child(3),.student_list li:nth-child(6){
+	margin-right: 0px;
+}
+.student_list li:nth-child(3),.student_list li:nth-child(2),.student_list li:nth-child(1){
+	margin-bottom: 14px;
+}
+.student_list li a{
+	display: block;
+	text-decoration: none;
+}
+.student_list .student{
+	display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 30px;
+}
+.student_list h4{
+	font-weight: normal;
+	display: block;
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+.student_list .entry_address{
+	display: block;
+	width: 54px;
+	height: 20px;
+	margin: auto;
+	margin-top: 5px;
+}
+.student_list .position{
+	font-size: 12px;
+    color: gray;
+    height: 16px;
+    line-height: 16px;
+    margin-top: 10px;
+}
+.student_list .employed{
+	font-size: 12px;
+    color: gray;
+    height: 16px;
+    margin-top: 35px;
+}
+/*让每个人*/
+.everybody{
+	height: 149px;
+}
+/*footer*/
+.footer{
+	background: #fff;
+	border-top:1px solid #f5f5f5;
+	margin-top: 30px;
+}
+.footer_main{
+	width: 1000px;
+	border-bottom: 1px solid #f5f5f5;
+	margin:auto;
+	padding-top: 20px;
+}
+/*底部logo*/
+.footer_l{
+	width: 224px;
+	height: 215px;
+	float: left;
+}
+.footer_l span{
+	display: block;
+	width: 109px;
+    height: 40px;
+}
+.footer_l p{
+	font-size: 12px;
+    color: #999;
+    margin-top: 20px;
+}
+/*底部极客中间信息*/
+.footer_c{
+	width:600px; 
+	float:left;
+}
+.footer_c dl{
+	float: left;
+	width: 135px;
+}
+.footer_c dt{
+	color: #808080;
+	font-size: 14px;
+    line-height: 30px;
+}
+.footer_c dd{
+	font-size: 12px;
+    line-height: 30px;
+}
+.footer_c dd a{
+	display: block;
+	color: #999;
+	text-decoration: none;
+}
+.footer_c dd a:hover{
+	color: #35b558;
+}
+/*右边联系电话*/
+.footer_r{
+	width:175px;
+	float: left;
+}
+.footer_r .dow{
+    position: relative;
+    display: inline-block;
+    width: 91px;
+    height: 30px;
+    border: 1px solid #eeeeee;
+    margin-bottom: 10px;
+    line-height: 30px;
+    color: #808080;
+    font-size: 13px;
+    padding-left: 40px;
+    cursor: pointer;
+}
+.dow-ios{
+	background: url(../img/icon-down-ios.png) left top no-repeat;
+    background-size: 23%;
+}
+.dow-and{
+	background: url(../img/icon-down-and.png) left top no-repeat;
+    background-size: 23%;	
+}
+.footer_r p{
+	color: #808080;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.scan-ode{
+	width: 115px;
+    height: 153px;
+    position: absolute;
+    top: -157px;
+    left: 12px;
+    z-index: 2;
+    display: none;
+}
+.dow-ios:hover .scan-ode,.dow-and:hover .scan-ode{
+    display: block;
+}
+/*悬浮侧边栏(置顶)*/
+.return-box{
+    position: fixed;
+    left: 50%;
+    margin-left: 510px;
+    bottom: 50px;
+    width: 34px;
+    text-align: center;
+    z-index: 2000;
+}
+.return{
+	display: none;
+    background: url(../img/gotop.jpg) 0 0 no-repeat;
+    background-size: 34px 103px;
+    width: 34px;
+    height: 34px;
+}
+.dow-App{
+    position: relative;
+    display: block;
+    background: #f7f7f7 url(../img/phone-1.png) center center no-repeat;
+    background-size: 12px 24px;
+    width: 34px;
+    height: 35px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.return:hover{
+    position: relative;
+    display: block;
+    background: url(../img/gotop2.jpg) 0 0 no-repeat;
+    background-size: 34px 103px;
+    width: 34px;
+    height: 34px;
+}
+.dow-App:hover{
+    position: relative;
+    display: block;
+    background: #f7f7f7 url(../img/phone-2.png) center center no-repeat;
+    background-size: 12px 24px;
+    width: 34px;
+    height: 35px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.dow-App:hover .dow-app{
+	display: block;
+}
+.dow-app{
+	background: url(../img/appewm.png) center center no-repeat;
+    background-size: 100%;
+    width: 126px;
+    height: 159px;
+    position: absolute;
+    z-index: 2100;
+    left: -126px;
+    top: -70px;
+    display: none;
+}
+.online-Service{
+	position: relative;
+    display: block;
+    background: #f7f7f7 url(../img/kfu1.png) center center no-repeat;
+    width: 34px;
+    height: 35px;
+    border-top: 1px solid #e0e0e0;
+}
+.online-Service:hover .service{
+	display: block;
+}
+.online-Service span{
+    position: absolute;
+    padding: 5px;
+    background: #f7f7f7;
+    color: #333;
+    font-size: 12px;
+    text-align: center;
+    width: 180px;
+    left: -190px;
+    display: none;
+}
+.online-Service span p{
+	line-height: 17px;
+}
